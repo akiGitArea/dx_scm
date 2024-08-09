@@ -1,0 +1,21 @@
+# Node.js関連のファイル/ディレクトリ
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ビルド成果物
+dist/
+build/
+
+# 一時ファイル
+*.log
+.env
+.DS_Store
+
+# TypeScript関連のファイル
+*.tsbuildinfo
+
+# エディタやIDEの設定ファイル
+.vscode/
+.idea/
