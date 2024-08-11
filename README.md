@@ -2,8 +2,10 @@
 
 ## GitHub Pages公開
 
-package.json.homepageにURL設定
+commit/push以降の作業
 
 ```bash
 npm run deploy
 ```
+
+package.json.homepageにURL設定
