@@ -3,14 +3,73 @@
 }
 
 .App-logo {
-  height: 45vmin;
+  height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* .icon-question {
+  height: 65%;
+  position: absolute;
+  top: 6vw;
+  left: 6vw;
+} */
+
+.icon-circle {
+  height: 65%;
+  position: absolute;
+  top: 6vw;
+  left: 6vw;
+  opacity: 0.3;
+}
+
+.icon-user {
+  height: 170%;
+  position: absolute;
+  top: 7vw;
+  left: 1vw;
+}
+
+.icon-index-pie {
+  height: 120%;
+  position: absolute;
+  top: -1vw;
+  left: 24.3vw;
+}
+
+.icon-index-line {
+  height: 120%;
+  position: absolute;
+  top: 1vw;
+  left: 18vw;
+}
+
+.icon-index-column {
+  height: 120%;
+  position: absolute;
+  top: -2vw;
+  left: 11vw;
+}
+
+.icon-index-ai {
+  height: 120%;
+  position: absolute;
+  top: 1vw;
+  left: 32vw;
+  font-size: 3rem;
+}
+
+.icon-light {
+  height: 65%;
+  position: absolute;
+  top: 6vw;
+  left: 6vw;
+}
+
+.icon-decider {
+  height: 170%;
+  position: absolute;
+  top: 7vw;
+  left: 1vw;
 }
 
 .App-header {
@@ -24,8 +83,154 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.worries {
+  position: absolute;
+  bottom: 15vw;
+  left: 20vw;
+}
+
+.indexes {
+  position: absolute;
+  top: 4vw;
+  left: 29.5vw;
+}
+
+.innovation {
+  position: absolute;
+  bottom: 15vw;
+  right: 20vw;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media (max-width: 960px) {
+  .worries {
+    bottom: 40vw;
+    left: 10vw;
+  }
+
+  .indexes {
+    top: 11vw;
+    left: 45vw;
+  }
+
+  .innovation {
+    bottom: 40vw;
+    right: 10vw;
+  }
+
+  /* .icon-question {
+    top: 13vw;
+    left: 12vw;
+  } */
+
+  .icon-circle {
+    top: 13vw;
+    left: 12vw;
+  }
+
+  .icon-user {
+    top: 14vw;
+    left: 1vw;
+  }
+
+  .icon-light {
+    top: 13vw;
+    left: 12vw;
+  }
+
+  .icon-decider {
+    top: 14vw;
+    left: 1vw;
+  }
+
+  .icon-index-pie {
+    top: 16vw;
+    left: 11.3vw;
+  }
+
+  .icon-index-line {
+    top: 19vw;
+    left: 0;
+  }
+
+  .icon-index-column {
+    top: 13vw;
+    left: -13vw;
+  }
+
+  .icon-index-ai {
+    top: 19vw;
+    left: 26vw;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .worries {
+    bottom: 70vw;
+    left: 5vw;
+  }
+
+  .indexes {
+    top: 30vw;
+    left: 41.5vw;
+  }
+
+  .innovation {
+    bottom: 70vw;
+    right: 5vw;
+  }
+
+  /* .icon-question {
+    top: 22vw;
+    left: 18vw;
+  } */
+
+  .icon-circle {
+    top: 22vw;
+    left: 18vw;
+  }
+
+  .icon-user {
+    top: 25vw;
+    left: 1vw;
+  }
+
+  .icon-light {
+    top: 22vw;
+    left: 18vw;
+  }
+
+  .icon-decider {
+    top: 25vw;
+    left: 1vw;
+  }
+
+  .icon-index-pie {
+    top: 20vw;
+    left: 17.5vw;
+  }
+
+  .icon-index-line {
+    top: 27vw;
+    left: 0;
+  }
+
+  .icon-index-column {
+    top: 15vw;
+    left: -20vw;
+  }
+
+  .icon-index-ai {
+    top: 30vw;
+    left: 38vw;
+    font-size: 2rem;
+  }
 }
 
 @keyframes App-logo-spin {

@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowsSpin } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowsSpin, faUserTie, faChartPie, faChartLine, faChartColumn, faQuestion, faLightbulb, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
+import FloatingBubble from './FloatingBubble';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <FontAwesomeIcon icon={faArrowsSpin} className="App-logo" spin />
-        {/* <img src={logo} alt="logo" /> */}
-        {/* <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+        <FontAwesomeIcon icon={faArrowsSpin} className="App-logo" />
+        <div className='worries'>
+          <FloatingBubble text="worries" />
+          {/* <FontAwesomeIcon icon={faQuestion} className="icon-question" /> */}
+          <FontAwesomeIcon icon={faCircleNotch} className="icon-circle" spin />
+          <FontAwesomeIcon icon={faUserTie} className="icon-user" />
+        </div>
+        <div className='indexes'>
+          <FloatingBubble text="index" />
+          <FontAwesomeIcon icon={faChartPie} className="icon-index-pie" />
+          <FontAwesomeIcon icon={faChartLine} className="icon-index-line" />
+          <FontAwesomeIcon icon={faChartColumn} className="icon-index-column" />
+          <p className="icon-index-ai">AI</p>
+        </div>
+        <div className='innovation'>
+          <FloatingBubble text="innovation" />
+          <FontAwesomeIcon icon={faLightbulb} className="icon-light" bounce />
+          <FontAwesomeIcon icon={faUserTie} className="icon-decider" />
+        </div>
       </header>
     </div>
   );
