@@ -1,13 +1,11 @@
-/* 吹き出し本体 */
 .floating-bubble {
     position: relative;
     padding: 1rem;
     background-color: #4d5566;
     border-radius: 2rem;
-    animation: float 2s ease-in-out infinite;
+    /* animation: float 2s ease-in-out infinite; */
 }
 
-/* 大きい丸 */
 .floating-bubble::before {
     content: '';
     position: absolute;
@@ -20,7 +18,6 @@
     height: 1rem;
 }
 
-/* 小さい丸 */
 .floating-bubble::after {
     content: '';
     position: absolute;

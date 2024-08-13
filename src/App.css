@@ -7,71 +7,6 @@
   pointer-events: none;
 }
 
-/* .icon-question {
-  height: 65%;
-  position: absolute;
-  top: 6vw;
-  left: 6vw;
-} */
-
-.icon-circle {
-  height: 65%;
-  position: absolute;
-  top: 6vw;
-  left: 6vw;
-  opacity: 0.3;
-}
-
-.icon-user {
-  height: 170%;
-  position: absolute;
-  top: 7vw;
-  left: 1vw;
-}
-
-.icon-index-pie {
-  height: 120%;
-  position: absolute;
-  top: -1vw;
-  left: 24.3vw;
-}
-
-.icon-index-line {
-  height: 120%;
-  position: absolute;
-  top: 1vw;
-  left: 18vw;
-}
-
-.icon-index-column {
-  height: 120%;
-  position: absolute;
-  top: -2vw;
-  left: 11vw;
-}
-
-.icon-index-ai {
-  height: 120%;
-  position: absolute;
-  top: 1vw;
-  left: 32vw;
-  font-size: 3rem;
-}
-
-.icon-light {
-  height: 65%;
-  position: absolute;
-  top: 6vw;
-  left: 6vw;
-}
-
-.icon-decider {
-  height: 170%;
-  position: absolute;
-  top: 7vw;
-  left: 1vw;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -83,10 +18,75 @@
   color: white;
 }
 
+.icon-circle {
+  height: 5%;
+  position: absolute;
+  top: 34vw;
+  left: 26vw;
+  opacity: 0.3;
+}
+
+.icon-user {
+  height: 15%;
+  position: absolute;
+  top: 35vw;
+  left: 20vw;
+}
+
+.icon-light {
+  height: 5%;
+  position: absolute;
+  top: 34vw;
+  right: 19vw;
+}
+
+.icon-decider {
+  height: 15%;
+  position: absolute;
+  top: 35vw;
+  right: 20vw;
+}
+
+.icon-index-column {
+  height: 8%;
+  position: absolute;
+  top: 3vw;
+  left: 40vw;
+}
+
+.icon-index-line {
+  height: 8%;
+  position: absolute;
+  top: 5vw;
+  left: 46vw;
+}
+
+.icon-index-pie {
+  height: 8%;
+  position: absolute;
+  top: 4vw;
+  left: 51vw;
+}
+
+.icon-index-ai {
+  height: 8%;
+  position: absolute;
+  top: 6vw;
+  left: 60vw;
+  font-size: 3rem;
+}
+
+.icon-trash {
+  position: absolute;
+  top: 21vw;
+  left: 6vw;
+  opacity: 0.5;
+}
+
 .worries {
   position: absolute;
   bottom: 15vw;
-  left: 20vw;
+  left: 17vw;
 }
 
 .indexes {
@@ -98,7 +98,7 @@
 .innovation {
   position: absolute;
   bottom: 15vw;
-  right: 20vw;
+  right: 21vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -122,11 +122,6 @@
     bottom: 40vw;
     right: 10vw;
   }
-
-  /* .icon-question {
-    top: 13vw;
-    left: 12vw;
-  } */
 
   .icon-circle {
     top: 13vw;
@@ -185,11 +180,6 @@
     bottom: 70vw;
     right: 5vw;
   }
-
-  /* .icon-question {
-    top: 22vw;
-    left: 18vw;
-  } */
 
   .icon-circle {
     top: 22vw;
