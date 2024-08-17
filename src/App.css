@@ -1,114 +1,178 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: relative;
 }
 
-.App-logo {
+#center-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#center-logo-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.icon-circle {
-  height: 5%;
+#worries-contents {
   position: absolute;
-  top: 34vw;
-  left: 26vw;
+  top: 60%;
+  left: 10%;
+  height: 30vh;
+  width: 20vw;
+}
+
+#worries {
+  height: 100%;
+  position: relative;
+}
+
+#user-contents {
+  position: absolute;
+  width: 7vw;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#icon-user-set {
+  height: 60%;
+  position: relative;
+}
+
+#icon-user {
+  height: 100%;
+}
+
+#icon-loading {
+  height: 30%;
+  position: absolute;
+  top: 0;
+  left: 90%;
   opacity: 0.3;
 }
 
-.icon-user {
-  height: 15%;
+#indexes-contents {
   position: absolute;
-  top: 35vw;
-  left: 20vw;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  height: 30vh;
+  width: 20vw;
 }
 
-.icon-light {
-  height: 5%;
-  position: absolute;
-  top: 34vw;
-  right: 19vw;
+#indexes {
+  height: 100%;
+  position: relative;
 }
 
-.icon-decider {
-  height: 15%;
+#icon-index-column {
+  height: 30%;
   position: absolute;
-  top: 35vw;
-  right: 20vw;
+  top: 0;
+  left: 0;
 }
 
-.icon-index-column {
-  height: 8%;
+#icon-index-line {
+  height: 30%;
   position: absolute;
-  top: 3vw;
-  left: 40vw;
+  top: 20%;
+  left: 30%;
 }
 
-.icon-index-line {
-  height: 8%;
+#icon-index-pie {
+  height: 30%;
   position: absolute;
-  top: 5vw;
-  left: 46vw;
+  top: 10%;
+  left: 60%;
 }
 
-.icon-index-pie {
-  height: 8%;
+#icon-index-ai {
   position: absolute;
-  top: 4vw;
-  left: 51vw;
-}
-
-.icon-index-ai {
-  height: 8%;
-  position: absolute;
-  top: 6vw;
-  left: 60vw;
+  top: 15%;
+  left: 90%;
   font-size: 3rem;
 }
 
-.icon-trash {
+#innovation-contents {
+  position: absolute;
+  top: 60%;
+  right: 10%;
+  height: 30vh;
+  width: 20vw;
+}
+
+#innovation {
+  height: 100%;
+  position: relative;
+}
+
+#decider-contents {
+  position: absolute;
+  width: 7vw;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#icon-decider-set {
+  height: 60%;
+  position: relative;
+}
+
+#icon-decider {
+  height: 100%;
+}
+
+#icon-light {
+  height: 30%;
+  position: absolute;
+  top: 0;
+  left: 90%;
+}
+
+#icon-trash {
   position: absolute;
   top: 21vw;
   left: 6vw;
   opacity: 0.5;
 }
 
-.worries {
+#move-ball {
   position: absolute;
-  bottom: 15vw;
-  left: 17vw;
+  width: 3rem;
+  height: 3rem;
+  background-color: #dafa23;
+  border-radius: 50%;
 }
 
-.indexes {
-  position: absolute;
-  top: 4vw;
-  left: 29.5vw;
-}
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
 
-.innovation {
-  position: absolute;
-  bottom: 15vw;
-  right: 21vw;
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  #center-logo {
+    animation: logo-spin infinite 20s linear;
   }
 }
 
 @media (max-width: 960px) {
-  .worries {
+  #worries {
     bottom: 40vw;
     left: 10vw;
   }
@@ -123,7 +187,7 @@
     right: 10vw;
   }
 
-  .icon-circle {
+  #icon-loading {
     top: 13vw;
     left: 12vw;
   }
@@ -166,7 +230,7 @@
 }
 
 @media (max-width: 430px) {
-  .worries {
+  #worries {
     bottom: 70vw;
     left: 5vw;
   }
@@ -181,7 +245,7 @@
     right: 5vw;
   }
 
-  .icon-circle {
+  #icon-loading {
     top: 22vw;
     left: 18vw;
   }
@@ -220,15 +284,5 @@
     top: 30vw;
     left: 38vw;
     font-size: 2rem;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
   }
 }
