@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru&family=M+PLUS+2:wght@100&family=Mochiy+Pop+One&family=Potta+One&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Kiwi+Maru&family=M+PLUS+2:wght@100&family=Mochiy+Pop+One&family=Monomaniac+One&family=Potta+One&family=Train+One&display=swap');
+
 .App {
+  font-family: "Kiwi Maru", serif;
+  /* font-family: "DotGothic16", sans-serif; */
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
   background-color: #282c34;
   min-height: 100vh;
@@ -9,6 +16,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   position: relative;
+  white-space: pre-line;
 }
 
 #center-logo {
@@ -25,10 +33,10 @@
 
 #worries-contents {
   position: absolute;
-  top: 60%;
-  left: 10%;
+  top: 55%;
+  left: 1%;
   height: 30vh;
-  width: 20vw;
+  width: 40vw;
 }
 
 #worries {
@@ -36,25 +44,37 @@
   position: relative;
 }
 
+#worry-set {
+  display: flex;
+  gap: 1rem;
+}
+
+#worry {
+  padding-right: 1rem;
+}
+
 #user-contents {
   position: absolute;
   width: 7vw;
-  top: 70%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #icon-user-set {
   height: 60%;
+  width: 80%;
   position: relative;
 }
 
 #icon-user {
   height: 100%;
+  width: 100%;
 }
 
 #icon-loading {
   height: 30%;
+  width: 50%;
   position: absolute;
   top: 0;
   left: 90%;
@@ -76,6 +96,7 @@
 }
 
 #icon-index-column {
+  width: 30%;
   height: 30%;
   position: absolute;
   top: 0;
@@ -83,6 +104,7 @@
 }
 
 #icon-index-line {
+  width: 30%;
   height: 30%;
   position: absolute;
   top: 20%;
@@ -90,6 +112,7 @@
 }
 
 #icon-index-pie {
+  width: 30%;
   height: 30%;
   position: absolute;
   top: 10%;
@@ -100,15 +123,33 @@
   position: absolute;
   top: 15%;
   left: 90%;
-  font-size: 3rem;
+  font-size: 2rem;
 }
+
+#index-result {
+  position: absolute;
+  top: 10%;
+  left: 120%;
+  padding: 1rem;
+  background-color: #4d5566;
+  border-radius: 2rem;
+  display: none;
+  font-size: 1rem;
+  width: 20vw;
+  border: 1px solid;
+  animation:
+    /* float 2s ease-in-out infinite, */
+    fade-in 2s ease-in-out forwards,
+    rainbow-border 3s linear infinite;
+}
+
 
 #innovation-contents {
   position: absolute;
-  top: 60%;
-  right: 10%;
+  top: 55%;
+  right: 1%;
   height: 30vh;
-  width: 20vw;
+  width: 40vw;
 }
 
 #innovation {
@@ -119,25 +160,44 @@
 #decider-contents {
   position: absolute;
   width: 7vw;
-  top: 70%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #icon-decider-set {
   height: 60%;
+  width: 80%;
   position: relative;
 }
 
 #icon-decider {
   height: 100%;
+  width: 100%;
 }
 
 #icon-light {
   height: 30%;
+  width: 50%;
   position: absolute;
   top: 0;
   left: 90%;
+}
+
+#innovation-idea {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  padding: 1rem;
+  background-color: #4d5566;
+  border-radius: 2rem;
+  display: none;
+  font-size: 1rem;
+  border: 1px solid;
+  animation:
+    /* float 2s ease-in-out infinite, */
+    fade-in 2s ease-in-out forwards,
+    rainbow-border 3s linear infinite;
 }
 
 #icon-trash {
@@ -151,8 +211,55 @@
   position: absolute;
   width: 3rem;
   height: 3rem;
-  background-color: #dafa23;
+  /* background-color: #6a707c; */
   border-radius: 50%;
+  animation: rainbow 2s linear infinite;
+}
+
+#move-ball-result-to-innovation {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  /* background-color: #6a707c; */
+  border-radius: 50%;
+  animation: rainbow 2s linear infinite;
+}
+
+#secret-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 10vh;
+  width: 10vw;
+  cursor: pointer;
+  border: none;
+  opacity: 0;
+}
+
+#secret-config {
+  text-align: left;
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 30vh;
+  width: 35vw;
+  background-color: #4d5566;
+  border-radius: 1rem;
+}
+
+#secret-contents {
+  /* display: flex; */
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+#close-secret-setting-icon {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 2rem;
 }
 
 @keyframes logo-spin {
@@ -165,6 +272,110 @@
   }
 }
 
+@keyframes float {
+
+  /* 0% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-10px) scale(1.1);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  } */
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: red;
+  }
+
+  14% {
+    background-color: orange;
+  }
+
+  28% {
+    background-color: yellow;
+  }
+
+  42% {
+    background-color: green;
+  }
+
+  57% {
+    background-color: blue;
+  }
+
+  71% {
+    background-color: indigo;
+  }
+
+  85% {
+    background-color: violet;
+  }
+
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes rainbow-border {
+  0% {
+    border-color: red;
+  }
+
+  14% {
+    border-color: orange;
+  }
+
+  28% {
+    border-color: yellow;
+  }
+
+  42% {
+    border-color: green;
+  }
+
+  57% {
+    border-color: blue;
+  }
+
+  71% {
+    border-color: indigo;
+  }
+
+  85% {
+    border-color: violet;
+  }
+
+  100% {
+    border-color: red;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   #center-logo {
     animation: logo-spin infinite 20s linear;
@@ -172,64 +383,78 @@
 }
 
 @media (max-width: 960px) {
-  #worries {
-    bottom: 40vw;
-    left: 10vw;
+  #worry-set {
+    display: block;
   }
 
-  .indexes {
-    top: 11vw;
-    left: 45vw;
+  #worries-contents {
+    top: 30%;
+    width: 35vw;
+    height: 70vh;
   }
 
-  .innovation {
-    bottom: 40vw;
-    right: 10vw;
+  #innovation-contents {
+    top: 53%;
+    width: 40vw;
+    height: 45vh;
+    font-size: 0.8rem;
   }
 
-  #icon-loading {
-    top: 13vw;
-    left: 12vw;
+  #innovation-idea {
+    font-size: 0.8rem;
   }
 
-  .icon-user {
-    top: 14vw;
-    left: 1vw;
+  #indexes-contents {
+    width: 72vw;
   }
 
-  .icon-light {
-    top: 13vw;
-    left: 12vw;
+  #index-result {
+    width: 44%;
+    top: 50%;
+    left: 63%;
+    font-size: 0.8rem;
   }
 
-  .icon-decider {
-    top: 14vw;
-    left: 1vw;
+  #icon-index-column {
+    width: 15%;
+    height: 15%;
+    top: 0;
+    left: 15%;
   }
 
-  .icon-index-pie {
-    top: 16vw;
-    left: 11.3vw;
+  #icon-index-line {
+    width: 15%;
+    height: 15%;
+    top: 20%;
+    left: 30%;
   }
 
-  .icon-index-line {
-    top: 19vw;
-    left: 0;
+  #icon-index-pie {
+    width: 15%;
+    height: 15%;
+    top: 10%;
+    left: 45%;
   }
 
-  .icon-index-column {
-    top: 13vw;
-    left: -13vw;
+  #icon-index-ai {
+    left: 60%;
   }
 
-  .icon-index-ai {
-    top: 19vw;
-    left: 26vw;
-    font-size: 3rem;
+  #icon-trash {
+    top: 45vw;
+  }
+
+  #secret-contents {
+    font-size: 0.8rem;
+  }
+
+  #secret-config {
+    height: 25vh;
+    width: 95vw;
   }
 }
 
-@media (max-width: 430px) {
+/* @media (max-width: 430px) {
   #worries {
     bottom: 70vw;
     left: 5vw;
@@ -285,4 +510,4 @@
     left: 38vw;
     font-size: 2rem;
   }
-}
+} */
