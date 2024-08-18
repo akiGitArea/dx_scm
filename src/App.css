@@ -86,7 +86,7 @@
   top: 10%;
   left: 50%;
   transform: translate(-50%, -10%);
-  height: 30vh;
+  height: 16vh;
   width: 20vw;
 }
 
@@ -97,7 +97,7 @@
 
 #icon-index-column {
   width: 30%;
-  height: 30%;
+  height: 50%;
   position: absolute;
   top: 0;
   left: 0;
@@ -105,15 +105,15 @@
 
 #icon-index-line {
   width: 30%;
-  height: 30%;
+  height: 50%;
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 30%;
 }
 
 #icon-index-pie {
   width: 30%;
-  height: 30%;
+  height: 50%;
   position: absolute;
   top: 10%;
   left: 60%;
@@ -393,6 +393,11 @@
     height: 70vh;
   }
 
+  #user-contents {
+    top: 91%;
+    width: 15vw;
+  }
+
   #innovation-contents {
     top: 53%;
     width: 40vw;
@@ -405,39 +410,46 @@
   }
 
   #indexes-contents {
-    width: 72vw;
+    width: 40vw;
+    height: 10vh;
+    top: 5%;
   }
 
   #index-result {
-    width: 44%;
-    top: 50%;
-    left: 63%;
+    width: 70%;
+    top: 70%;
+    left: 80%;
     font-size: 0.8rem;
   }
 
   #icon-index-column {
-    width: 15%;
-    height: 15%;
+    width: 20%;
+    height: 40%;
     top: 0;
-    left: 15%;
+    left: 0;
   }
 
   #icon-index-line {
-    width: 15%;
-    height: 15%;
+    width: 20%;
+    height: 40%;
     top: 20%;
     left: 30%;
   }
 
   #icon-index-pie {
-    width: 15%;
-    height: 15%;
+    width: 20%;
+    height: 40%;
     top: 10%;
-    left: 45%;
+    left: 55%;
   }
 
   #icon-index-ai {
-    left: 60%;
+    left: 80%;
+    font-size: 1rem;
+  }
+
+  #decider-contents {
+    width: 15vw;
   }
 
   #icon-trash {

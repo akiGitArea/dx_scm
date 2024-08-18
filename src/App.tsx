@@ -116,16 +116,16 @@ function App() {
     }
     api.start({
       from: {
-        transform: `translate(${fromRect.left}px, ${fromRect.top}px)`,
+        transform: `translate(${fromRect.left + (fromRect.width / 2)}px, ${fromRect.top}px)`,
       },
       to: async (next) => {
         await next({
-          transform: `translate(${(fromRect.left + toRect.left) / 2}px, ${(fromRect.top + toRect.top) / 2}px)`,
+          transform: `translate(${((fromRect.left + (fromRect.width / 2)) + toRect.left) / 2}px, ${(fromRect.top + toRect.bottom) / 2}px)`,
           opacity: 1,
           config: { duration: 1000 },
         });
         await next({
-          transform: `translate(${toRect.left}px, ${toRect.top}px)`,
+          transform: `translate(${toRect.left}px, ${toRect.bottom}px)`,
           opacity: 0,
           config: { duration: 1000 },
         });
@@ -141,16 +141,16 @@ function App() {
     await delay(1000);
     ball2.start({
       from: {
-        transform: `translate(${toRect.left}px, ${toRect.top}px)`,
+        transform: `translate(${toRect.right}px, ${toRect.bottom}px)`,
       },
       to: async (next) => {
         await next({
-          transform: `translate(${(toRect.left + innovationRect.left) / 2}px, ${(toRect.top + innovationRect.top) / 2}px)`,
+          transform: `translate(${(toRect.right + (innovationRect.left + (fromRect.width / 2))) / 2}px, ${(toRect.bottom + innovationRect.top) / 2}px)`,
           opacity: 1,
           config: { duration: 1000 },
         });
         await next({
-          transform: `translate(${innovationRect.left}px, ${innovationRect.top}px)`,
+          transform: `translate(${innovationRect.left + (fromRect.width / 2)}px, ${innovationRect.top}px)`,
           opacity: 0,
           config: { duration: 1000 },
         });
@@ -217,7 +217,8 @@ function App() {
       <div id="center-logo-content">
         <FontAwesomeIcon icon={faArrowsSpin} id="center-logo" />
       </div>
-      <div id="worries-contents">
+      <div id="worries-contents" ref={fromRef}>
+        {/* <div id="worries-ball-from"></div> */}
         <div id="worries">
           <div id="worry-set">
             {worrySet.map((item, index) => (
@@ -232,7 +233,7 @@ function App() {
               </div>
             ))}
           </div>
-          <div id="user-contents" ref={fromRef}>
+          <div id="user-contents">
             <div id="icon-user-set">
               <FontAwesomeIcon icon={faUserTie} id="icon-user" />
               <FontAwesomeIcon icon={faCircleNotch} id="icon-loading" spin />
@@ -240,8 +241,8 @@ function App() {
           </div>
         </div>
       </div>
-      <div id="indexes-contents">
-        <div id="indexes" ref={toRef}>
+      <div id="indexes-contents" ref={toRef}>
+        <div id="indexes">
           <div id="index-result">{indexResult}</div>
           <FontAwesomeIcon icon={faChartPie} id="icon-index-pie" />
           <FontAwesomeIcon icon={faChartLine} id="icon-index-line" />
