@@ -406,7 +406,9 @@
   }
 
   #innovation-idea {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    padding: 0.8rem;
+    border-radius: 1.5rem;
   }
 
   #indexes-contents {
@@ -419,7 +421,9 @@
     width: 70%;
     top: 70%;
     left: 80%;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    padding: 0.8rem;
+    border-radius: 1.5rem;
   }
 
   #icon-index-column {
@@ -457,11 +461,13 @@
   }
 
   #secret-contents {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    /* padding: 0.8rem;
+    border-radius: 1.5rem; */
   }
 
   #secret-config {
-    height: 25vh;
+    height: 26vh;
     width: 95vw;
   }
 }
