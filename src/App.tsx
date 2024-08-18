@@ -186,7 +186,6 @@ function App() {
   useEffect(() => {
     const items = getRandomElements(jsonData, 3);
     setWorrySet(items);
-    console.log(items)
     return () => {
       console.log('コンポーネントがアンマウントされました');
     };
